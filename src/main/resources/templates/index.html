@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
     <meta charset="utf-8"/>
@@ -8,22 +8,14 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Devops Buddy</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
 
     <!-- Custom CSS -->
-    <style>
-        body {
-            padding-top: 50px;
-        }
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
-        }
-    </style>
-
+	<link type="text/css" th:href="@{/css/styles.css}" rel="stylesheet" media="screen"/>
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -73,7 +65,8 @@
     <!-- /.row -->
 </div>
 <!-- /.container -->
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
 </body>
 </html>
